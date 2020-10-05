@@ -1,0 +1,42 @@
+﻿@model GilliandMIS4200.Models.StudentCourse
+
+@{
+    ViewBag.Title = "Enrollment Details";
+}
+
+<h2>Enrollment Details</h2>
+
+<div>
+    <h4>StudentCourse</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.course.courseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.course.courseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.student.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.student.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.enrollmentDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.enrollmentDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.studentCourseID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
